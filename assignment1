@@ -19,14 +19,16 @@ while :
   echo -n "Enter your menu choice [1-8]:"
   read yourch
   case $yourch in
-    1) passwd ; echo "press a key. . ." ; read -n 1;;
+    1) echo "Enter username :"; read USER ;
+       passwd $USER ; echo "press a key. . ." ; read -n 1;;
     2) df -kh ; echo "Press a key. . ." ; read -n 1 ;;
-    3) echo "Enter username and IP :"; read USER ; read IP ; 
+    3) echo "Enter username :"; read USER ; 
+       echo "Enter IP :"; read IP ; 
        ssh $USER@$IP;
        echo "Press a key. . ." ; read -n 1 ;;
     4) ps -Ae ; echo "Press a key. . ." ; read -n 1 ;;
     5) netstat -a | egrep 'Proto|LISTEN' ; echo "Press a key. . ." ; read -n 1 ;;
-    6) ps axu | grep java | grep -v grep ; echo "Press a key. . ." ; read -n 1 ;;
+    6) ps axuwww | grep java | grep -v grep ; echo "Press a key. . ." ; read -n 1 ;;
     7) echo "Enter the app name to be killed :" ;
        read APP ; pkill $APP ; echo "Press a key. . ." ; read -n 1 ;;
     8) exit 0
