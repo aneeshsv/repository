@@ -1,0 +1,16 @@
+By default shell script will not run. You need to set execute permission for your shell script. To execute or run script type the following command:
+
+ chmod +x sample_script
+ 
+ OR
+
+ chmod 0755 sample_script
+
+Next, use the ls command to view permission on the script:
+
+ $ ls -l sample_script
+
+ To execute the script, type:
+
+ $ ./sample_script
+
