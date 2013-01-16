@@ -1,7 +1,7 @@
 repository
 ==========
 
-Assignment - System Analyst for Bangalore Location
+Assignment for System Analyst for Bangalore Location
 
 This is a sample shell script where a user will be able to do the following tasks through menu once the program is started.
 
